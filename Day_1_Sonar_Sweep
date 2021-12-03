@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
-
 int main(){
 
 	FILE *archivo;
@@ -18,13 +15,13 @@ int main(){
     }
     else
     {
-            fgets(carAnterior,10,archivo);
+        fgets(carAnterior,10,archivo);
  	    while (feof(archivo) == 0)
  	    {
-                fgets(carSiguiente,10,archivo);
-                if(atoi(carSiguiente) > atoi(carAnterior))
-                    cont ++;
-                strcpy(carAnterior,carSiguiente);
+            fgets(carSiguiente,10,archivo);
+            if(atoi(carSiguiente) > atoi(carAnterior))
+                cont += 1;
+           strcpy(carAnterior,carSiguiente);
  	    }
 
     }
