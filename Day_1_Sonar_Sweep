@@ -22,7 +22,7 @@ int main(){
  	    while (feof(archivo) == 0)
  	    {
                 fgets(carSiguiente,10,archivo);
-                if(atoi(carAnterior) < atoi(carSiguiente))
+                if(atoi(carSiguiente) > atoi(carAnterior))
                     cont ++;
                 strcpy(carAnterior,carSiguiente);
  	    }
