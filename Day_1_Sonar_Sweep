@@ -18,13 +18,13 @@ int main(){
     }
     else
     {
-        fgets(carAnterior,10,archivo);
+            fgets(carAnterior,10,archivo);
  	    while (feof(archivo) == 0)
  	    {
-            fgets(carSiguiente,10,archivo);
-            if(atoi(carAnterior) < atoi(carSiguiente))
-                cont ++;
-           strcpy(carAnterior,carSiguiente);
+                fgets(carSiguiente,10,archivo);
+                if(atoi(carAnterior) < atoi(carSiguiente))
+                    cont ++;
+                strcpy(carAnterior,carSiguiente);
  	    }
 
     }
