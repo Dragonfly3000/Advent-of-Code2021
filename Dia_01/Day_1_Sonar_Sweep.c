@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+
+	FILE *archivo;
+	char carAnterior[10],carSiguiente[10];
+	int cont = 0;
+	archivo = fopen("salida.txt","r");
+	if (archivo == NULL)
+    {
+        printf("\nError de apertura del archivo. \n\n");
+        exit(1);
+    }
+    else
+    {
+        fgets(carAnterior,10,archivo);
+ 	    while (feof(archivo) == 0)
+ 	    {
+            fgets(carSiguiente,10,archivo);
+            if(atoi(carSiguiente) > atoi(carAnterior))
+                cont += 1;
+           strcpy(carAnterior,carSiguiente);
+ 	    }
+
+    }
+    fclose(archivo);
+    printf("%d", cont);
+
+return 0;
+}
