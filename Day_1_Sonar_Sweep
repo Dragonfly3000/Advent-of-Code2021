@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-int aumento_(int val1, int val2){
-    return (val2 > val1);
-}
+
+
+
 int main(){
 
 	FILE *archivo;
@@ -22,7 +22,7 @@ int main(){
  	    while (feof(archivo) == 0)
  	    {
             fgets(carSiguiente,10,archivo);
-            if(aumento_(atoi(carAnterior),atoi(carSiguiente)))
+            if(atoi(carAnterior) < atoi(carSiguiente))
                 cont ++;
            strcpy(carAnterior,carSiguiente);
  	    }
